@@ -22,9 +22,9 @@ struct TourInformation: Decodable {
                 struct Item: Decodable {
                     let title: String
                     let baseAddress: String
-                    let detailAddress: String
+                    let detailAddress: String?
                     let inquiringNumber: String
-                    let imageURLAddress: String
+                    let imageURLAddress: String?
 
                     enum CodingKeys: String, CodingKey {
                         case title
