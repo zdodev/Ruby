@@ -14,6 +14,7 @@
 		410B6BF9265F5B79009E6A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410B6BF8265F5B79009E6A17 /* Assets.xcassets */; };
 		410B6BFC265F5B79009E6A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410B6BFA265F5B79009E6A17 /* LaunchScreen.storyboard */; };
 		410B6C07265F5B79009E6A17 /* VisitKoreaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C06265F5B79009E6A17 /* VisitKoreaAppTests.swift */; };
+		410B6C22265F669B009E6A17 /* TourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C21265F669B009E6A17 /* TourTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		410B6C02265F5B79009E6A17 /* VisitKoreaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisitKoreaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		410B6C06265F5B79009E6A17 /* VisitKoreaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitKoreaAppTests.swift; sourceTree = "<group>"; };
 		410B6C08265F5B79009E6A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		410B6C21265F669B009E6A17 /* TourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				410B6BF3265F5B77009E6A17 /* TourInformationViewController.swift */,
+				410B6C23265F673A009E6A17 /* Views */,
 			);
 			path = VisitKoreaApp;
 			sourceTree = "<group>";
@@ -113,6 +116,14 @@
 				410B6BF8265F5B79009E6A17 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		410B6C23265F673A009E6A17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				410B6C21265F669B009E6A17 /* TourTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 				410B6BF4265F5B77009E6A17 /* TourInformationViewController.swift in Sources */,
 				410B6BF0265F5B77009E6A17 /* AppDelegate.swift in Sources */,
 				410B6BF2265F5B77009E6A17 /* SceneDelegate.swift in Sources */,
+				410B6C22265F669B009E6A17 /* TourTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
