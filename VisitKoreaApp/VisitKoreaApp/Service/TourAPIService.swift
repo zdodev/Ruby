@@ -5,12 +5,18 @@ enum NetworkError: Error {
 }
 
 struct TourAPIService {
+    private let sessionManager: SessionManagerProtocol
+    
+    init(sessionManager: SessionManagerProtocol) {
+        self.sessionManager = sessionManager
+    }
+    
     func search(pageNumber: Int, completionHandler: @escaping (Result<TourInformation, NetworkError>) -> Void) {
         guard let url = makeURL(pageNumber) else {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        sessionManager.dataTask(with: url) { data, response, error in
             if error != nil {
                 completionHandler(.failure(.networkError))
                 return
