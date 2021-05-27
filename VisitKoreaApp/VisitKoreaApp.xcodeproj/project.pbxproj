@@ -19,6 +19,8 @@
 		410B6C29265F7787009E6A17 /* TourAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C28265F7787009E6A17 /* TourAPIService.swift */; };
 		410B6C2C265F86DA009E6A17 /* JSONAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C2B265F86DA009E6A17 /* JSONAnalyzer.swift */; };
 		410B6C2E265FAA5D009E6A17 /* TourInformationListSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 410B6C2D265FAA5D009E6A17 /* TourInformationListSample.json */; };
+		410B6C30265FCB3C009E6A17 /* SessionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C2F265FCB3C009E6A17 /* SessionManagerProtocol.swift */; };
+		410B6C32265FCCE3009E6A17 /* SessionManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C31265FCCE3009E6A17 /* SessionManagerStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		410B6C28265F7787009E6A17 /* TourAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourAPIService.swift; sourceTree = "<group>"; };
 		410B6C2B265F86DA009E6A17 /* JSONAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAnalyzer.swift; sourceTree = "<group>"; };
 		410B6C2D265FAA5D009E6A17 /* TourInformationListSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TourInformationListSample.json; sourceTree = "<group>"; };
+		410B6C2F265FCB3C009E6A17 /* SessionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerProtocol.swift; sourceTree = "<group>"; };
+		410B6C31265FCCE3009E6A17 /* SessionManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		410B6C05265F5B79009E6A17 /* VisitKoreaAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				410B6C31265FCCE3009E6A17 /* SessionManagerStub.swift */,
 				410B6C06265F5B79009E6A17 /* VisitKoreaAppTests.swift */,
 				410B6C2D265FAA5D009E6A17 /* TourInformationListSample.json */,
 				410B6C08265F5B79009E6A17 /* Info.plist */,
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				410B6C28265F7787009E6A17 /* TourAPIService.swift */,
+				410B6C2F265FCB3C009E6A17 /* SessionManagerProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410B6C30265FCB3C009E6A17 /* SessionManagerProtocol.swift in Sources */,
 				410B6BF4265F5B77009E6A17 /* TourInformationViewController.swift in Sources */,
 				410B6BF0265F5B77009E6A17 /* AppDelegate.swift in Sources */,
 				410B6C2C265F86DA009E6A17 /* JSONAnalyzer.swift in Sources */,
@@ -277,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410B6C32265FCCE3009E6A17 /* SessionManagerStub.swift in Sources */,
 				410B6C07265F5B79009E6A17 /* VisitKoreaAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
