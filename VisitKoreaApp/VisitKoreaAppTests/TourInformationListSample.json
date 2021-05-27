@@ -1,0 +1,37 @@
+{
+    "response": {
+        "header": {
+            "resultCode": "0000",
+            "resultMsg": "OK"
+        },
+        "body": {
+            "items": {
+                "item": {
+                    "addr1": "대구광역시 북구 호암로 15",
+                    "addr2": "(칠성동2가)",
+                    "areacode": 4,
+                    "cat1": "A02",
+                    "cat2": "A0208",
+                    "cat3": "A02080400",
+                    "contentid": 2705052,
+                    "contenttypeid": 15,
+                    "createdtime": 20210201172200,
+                    "firstimage": "http://tong.visitkorea.or.kr/cms/resource/60/2705060_image2_1.jpg",
+                    "firstimage2": "http://tong.visitkorea.or.kr/cms/resource/60/2705060_image2_1.jpg",
+                    "mapx": "128.5922570230",
+                    "mapy": 35.8835072863,
+                    "mlevel": 6,
+                    "modifiedtime": 20210201173042,
+                    "readcount": 0,
+                    "sigungucode": 5,
+                    "tel": "053-666-6170",
+                    "title": "가족오페라 <마술피리> 2021",
+                    "zipcode": 41585
+                }
+            },
+            "numOfRows": 1,
+            "pageNo": 1,
+            "totalCount": 41
+        }
+    }
+}
