@@ -1,8 +1,5 @@
-//
-//  TourViewModel.swift
-//  VisitKoreaApp
-//
-//  Created by Zero DotOne on 2021/05/27.
-//
-
-import Foundation
+struct TourViewModel {
+    let title: String
+    let address: String
+    let inquiringNumber: String
+}
