@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		410B6BF0265F5B77009E6A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6BEF265F5B77009E6A17 /* AppDelegate.swift */; };
+		410B6BF2265F5B77009E6A17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6BF1265F5B77009E6A17 /* SceneDelegate.swift */; };
+		410B6BF4265F5B77009E6A17 /* TourInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6BF3265F5B77009E6A17 /* TourInformationViewController.swift */; };
+		410B6BF7265F5B77009E6A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410B6BF5265F5B77009E6A17 /* Main.storyboard */; };
+		410B6BF9265F5B79009E6A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410B6BF8265F5B79009E6A17 /* Assets.xcassets */; };
+		410B6BFC265F5B79009E6A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410B6BFA265F5B79009E6A17 /* LaunchScreen.storyboard */; };
+		410B6C07265F5B79009E6A17 /* VisitKoreaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C06265F5B79009E6A17 /* VisitKoreaAppTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		410B6C03265F5B79009E6A17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 410B6BE4265F5B77009E6A17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 410B6BEB265F5B77009E6A17;
+			remoteInfo = VisitKoreaApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		410B6BEC265F5B77009E6A17 /* VisitKoreaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisitKoreaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		410B6BEF265F5B77009E6A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		410B6BF1265F5B77009E6A17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		410B6BF3265F5B77009E6A17 /* TourInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInformationViewController.swift; sourceTree = "<group>"; };
+		410B6BF6265F5B77009E6A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		410B6BF8265F5B79009E6A17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		410B6BFB265F5B79009E6A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		410B6BFD265F5B79009E6A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		410B6C02265F5B79009E6A17 /* VisitKoreaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisitKoreaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		410B6C06265F5B79009E6A17 /* VisitKoreaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitKoreaAppTests.swift; sourceTree = "<group>"; };
+		410B6C08265F5B79009E6A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		410B6BE9265F5B77009E6A17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410B6BFF265F5B79009E6A17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		410B6BE3265F5B77009E6A17 = {
+			isa = PBXGroup;
+			children = (
+				410B6BEE265F5B77009E6A17 /* VisitKoreaApp */,
+				410B6C20265F5FDF009E6A17 /* Resources */,
+				410B6C1F265F5DA2009E6A17 /* Supporting Files */,
+				410B6C05265F5B79009E6A17 /* VisitKoreaAppTests */,
+				410B6BED265F5B77009E6A17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		410B6BED265F5B77009E6A17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				410B6BEC265F5B77009E6A17 /* VisitKoreaApp.app */,
+				410B6C02265F5B79009E6A17 /* VisitKoreaAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		410B6BEE265F5B77009E6A17 /* VisitKoreaApp */ = {
+			isa = PBXGroup;
+			children = (
+				410B6BF3265F5B77009E6A17 /* TourInformationViewController.swift */,
+			);
+			path = VisitKoreaApp;
+			sourceTree = "<group>";
+		};
+		410B6C05265F5B79009E6A17 /* VisitKoreaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				410B6C06265F5B79009E6A17 /* VisitKoreaAppTests.swift */,
+				410B6C08265F5B79009E6A17 /* Info.plist */,
+			);
+			path = VisitKoreaAppTests;
+			sourceTree = "<group>";
+		};
+		410B6C1F265F5DA2009E6A17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				410B6BEF265F5B77009E6A17 /* AppDelegate.swift */,
+				410B6BF1265F5B77009E6A17 /* SceneDelegate.swift */,
+				410B6BFD265F5B79009E6A17 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		410B6C20265F5FDF009E6A17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				410B6BF5265F5B77009E6A17 /* Main.storyboard */,
+				410B6BFA265F5B79009E6A17 /* LaunchScreen.storyboard */,
+				410B6BF8265F5B79009E6A17 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		410B6BEB265F5B77009E6A17 /* VisitKoreaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410B6C16265F5B79009E6A17 /* Build configuration list for PBXNativeTarget "VisitKoreaApp" */;
+			buildPhases = (
+				410B6BE8265F5B77009E6A17 /* Sources */,
+				410B6BE9265F5B77009E6A17 /* Frameworks */,
+				410B6BEA265F5B77009E6A17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VisitKoreaApp;
+			productName = VisitKoreaApp;
+			productReference = 410B6BEC265F5B77009E6A17 /* VisitKoreaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		410B6C01265F5B79009E6A17 /* VisitKoreaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410B6C19265F5B79009E6A17 /* Build configuration list for PBXNativeTarget "VisitKoreaAppTests" */;
+			buildPhases = (
+				410B6BFE265F5B79009E6A17 /* Sources */,
+				410B6BFF265F5B79009E6A17 /* Frameworks */,
+				410B6C00265F5B79009E6A17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				410B6C04265F5B79009E6A17 /* PBXTargetDependency */,
+			);
+			name = VisitKoreaAppTests;
+			productName = VisitKoreaAppTests;
+			productReference = 410B6C02265F5B79009E6A17 /* VisitKoreaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		410B6BE4265F5B77009E6A17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					410B6BEB265F5B77009E6A17 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					410B6C01265F5B79009E6A17 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 410B6BEB265F5B77009E6A17;
+					};
+				};
+			};
+			buildConfigurationList = 410B6BE7265F5B77009E6A17 /* Build configuration list for PBXProject "VisitKoreaApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 410B6BE3265F5B77009E6A17;
+			productRefGroup = 410B6BED265F5B77009E6A17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				410B6BEB265F5B77009E6A17 /* VisitKoreaApp */,
+				410B6C01265F5B79009E6A17 /* VisitKoreaAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		410B6BEA265F5B77009E6A17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410B6BFC265F5B79009E6A17 /* LaunchScreen.storyboard in Resources */,
+				410B6BF9265F5B79009E6A17 /* Assets.xcassets in Resources */,
+				410B6BF7265F5B77009E6A17 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410B6C00265F5B79009E6A17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		410B6BE8265F5B77009E6A17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410B6BF4265F5B77009E6A17 /* TourInformationViewController.swift in Sources */,
+				410B6BF0265F5B77009E6A17 /* AppDelegate.swift in Sources */,
+				410B6BF2265F5B77009E6A17 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410B6BFE265F5B79009E6A17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410B6C07265F5B79009E6A17 /* VisitKoreaAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		410B6C04265F5B79009E6A17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 410B6BEB265F5B77009E6A17 /* VisitKoreaApp */;
+			targetProxy = 410B6C03265F5B79009E6A17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		410B6BF5265F5B77009E6A17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				410B6BF6265F5B77009E6A17 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		410B6BFA265F5B79009E6A17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				410B6BFB265F5B79009E6A17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		410B6C14265F5B79009E6A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		410B6C15265F5B79009E6A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		410B6C17265F5B79009E6A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zdodev.VisitKoreaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		410B6C18265F5B79009E6A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zdodev.VisitKoreaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		410B6C1A265F5B79009E6A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VisitKoreaAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zdodev.VisitKoreaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VisitKoreaApp.app/VisitKoreaApp";
+			};
+			name = Debug;
+		};
+		410B6C1B265F5B79009E6A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VisitKoreaAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zdodev.VisitKoreaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VisitKoreaApp.app/VisitKoreaApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		410B6BE7265F5B77009E6A17 /* Build configuration list for PBXProject "VisitKoreaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410B6C14265F5B79009E6A17 /* Debug */,
+				410B6C15265F5B79009E6A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		410B6C16265F5B79009E6A17 /* Build configuration list for PBXNativeTarget "VisitKoreaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410B6C17265F5B79009E6A17 /* Debug */,
+				410B6C18265F5B79009E6A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		410B6C19265F5B79009E6A17 /* Build configuration list for PBXNativeTarget "VisitKoreaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410B6C1A265F5B79009E6A17 /* Debug */,
+				410B6C1B265F5B79009E6A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 410B6BE4265F5B77009E6A17 /* Project object */;
+}
