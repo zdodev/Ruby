@@ -2,6 +2,8 @@ import Foundation
 
 enum NetworkError: Error {
     case networkError
+    case dataReceiveError
+    case decodeError
 }
 
 struct TourAPIService {
@@ -23,13 +25,13 @@ struct TourAPIService {
             }
             
             guard let receivedData = data else {
-                completionHandler(.failure(.networkError))
+                completionHandler(.failure(.dataReceiveError))
                 return
             }
             
             let jsonAnalyzer = JSONAnalyzer()
             guard let decodedData = jsonAnalyzer.decodeJSON(TourInformation.self, data: receivedData) else {
-                completionHandler(.failure(.networkError))
+                completionHandler(.failure(.decodeError))
                 return
             }
 
