@@ -68,7 +68,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="addressLabel" destination="OtR-Xw-Y84" id="SXp-O9-Kiz"/>
+                                            <outlet property="inquiringLabel" destination="A1k-dN-14f" id="B63-eb-tcT"/>
                                             <outlet property="mainImage" destination="ZkB-ov-KkX" id="F5k-3t-aFH"/>
+                                            <outlet property="titleLabel" destination="05C-v4-0uZ" id="iQN-PA-0yc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

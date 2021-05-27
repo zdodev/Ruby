@@ -21,6 +21,7 @@
 		410B6C2E265FAA5D009E6A17 /* TourInformationListSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 410B6C2D265FAA5D009E6A17 /* TourInformationListSample.json */; };
 		410B6C30265FCB3C009E6A17 /* SessionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C2F265FCB3C009E6A17 /* SessionManagerProtocol.swift */; };
 		410B6C32265FCCE3009E6A17 /* SessionManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C31265FCCE3009E6A17 /* SessionManagerStub.swift */; };
+		410B6C3A265FE7E4009E6A17 /* TourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C39265FE7E4009E6A17 /* TourViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		410B6C2D265FAA5D009E6A17 /* TourInformationListSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TourInformationListSample.json; sourceTree = "<group>"; };
 		410B6C2F265FCB3C009E6A17 /* SessionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerProtocol.swift; sourceTree = "<group>"; };
 		410B6C31265FCCE3009E6A17 /* SessionManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerStub.swift; sourceTree = "<group>"; };
+		410B6C39265FE7E4009E6A17 /* TourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				410B6C25265F75F4009E6A17 /* TourInformation.swift */,
+				410B6C39265FE7E4009E6A17 /* TourViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410B6C3A265FE7E4009E6A17 /* TourViewModel.swift in Sources */,
 				410B6C30265FCB3C009E6A17 /* SessionManagerProtocol.swift in Sources */,
 				410B6BF4265F5B77009E6A17 /* TourInformationViewController.swift in Sources */,
 				410B6BF0265F5B77009E6A17 /* AppDelegate.swift in Sources */,
