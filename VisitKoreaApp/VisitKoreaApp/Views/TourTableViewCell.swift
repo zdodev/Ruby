@@ -14,9 +14,18 @@ final class TourTableViewCell: UITableViewCell {
     
     func configureCellImage(data: Data) {
         if let imageView = UIImage(data: data) {
-            mainImage.image = imageView
+            DispatchQueue.main.async {
+                self.mainImage.image = imageView
+            }
         } else {
             mainImage.image = UIImage(systemName: "photo")
         }
+    }
+    
+    override func prepareForReuse() {
+        mainImage.image = nil
+        titleLabel.text = nil
+        addressLabel.text = nil
+        inquiringLabel.text = nil
     }
 }
