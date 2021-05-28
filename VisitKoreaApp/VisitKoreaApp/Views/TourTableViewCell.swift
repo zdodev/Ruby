@@ -12,7 +12,11 @@ final class TourTableViewCell: UITableViewCell {
         inquiringLabel.text = tourViewModel.inquiringNumber
     }
     
-    func configureCellImage() {
-        
+    func configureCellImage(data: Data) {
+        if let imageView = UIImage(data: data) {
+            mainImage.image = imageView
+        } else {
+            mainImage.image = UIImage(systemName: "photo")
+        }
     }
 }
