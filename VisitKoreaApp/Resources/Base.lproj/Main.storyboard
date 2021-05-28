@@ -28,6 +28,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZkB-ov-KkX">
                                                     <rect key="frame" x="20" y="11" width="80" height="80"/>
+                                                    <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="YWG-TS-k2j"/>
                                                         <constraint firstAttribute="height" constant="80" id="n6E-ZR-fgU"/>
@@ -119,6 +120,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
