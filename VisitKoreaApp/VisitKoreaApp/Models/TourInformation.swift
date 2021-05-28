@@ -12,12 +12,19 @@ struct TourInformation: Decodable {
         
         struct Body: Decodable {
             let items: Items
-            let numOfRows: Int
-            let pageNo: Int
+            let numberOfRows: Int
+            let pageNumber: Int
             let totalCount: Int
             
+            enum CodingKeys: String, CodingKey {
+                case items
+                case numberOfRows = "numOfRows"
+                case pageNumber = "pageNo"
+                case totalCount
+            }
+            
             struct Items: Decodable {
-                let item: Item
+                let item: [Item]
                 
                 struct Item: Decodable {
                     let title: String
