@@ -106,9 +106,22 @@ extension TourInformationViewController: UITableViewDelegate {
         let height = scrollView.frame.height
         
         if offsetY > (contentHeight - height) {
-            if isPaging == false && remainPage > 0 {
+            if isPaging == false && hasNextPage() {
                 nextPaging()
             }
         }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !hasNextPage() {
+            let alert = UIAlertController(title: "마지막 페이지입니다.", message: nil, preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "확인", style: .default)
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+        }
+    }
+    
+    private func hasNextPage() -> Bool {
+        remainPage > 0
     }
 }
