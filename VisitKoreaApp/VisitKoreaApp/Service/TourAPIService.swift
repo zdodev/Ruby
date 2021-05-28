@@ -39,6 +39,32 @@ struct TourAPIService {
         }.resume()
     }
     
+    func searchSingleItem(pageNumber: Int, completionHandler: @escaping (Result<TourInformationSingleItem, NetworkError>) -> Void) {
+        guard let url = makeURL(pageNumber) else {
+            return
+        }
+
+        sessionManager.dataTask(with: url) { data, response, error in
+            if error != nil {
+                completionHandler(.failure(.networkError))
+                return
+            }
+
+            guard let receivedData = data else {
+                completionHandler(.failure(.dataReceiveError))
+                return
+            }
+
+            let jsonAnalyzer = JSONAnalyzer()
+            guard let decodedData = jsonAnalyzer.decodeJSON(TourInformationSingleItem.self, data: receivedData) else {
+                completionHandler(.failure(.decodeError))
+                return
+            }
+
+            completionHandler(.success(decodedData))
+        }.resume()
+    }
+    
     private func makeURL(_ pageNumber: Int) -> URL? {
         let urlAddress = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList"
         guard var urlComponent = URLComponents(string: urlAddress) else {
@@ -47,7 +73,7 @@ struct TourAPIService {
         urlComponent.queryItems = [URLQueryItem]()
         
         urlComponent.queryItems?.append(URLQueryItem(name: "serviceKey", value: "hm3Ng%2Bp0hajUH1lyqqB1JTmURPuIidiOj%2BoR1I49TQDEJPB9eY9CrArmUXrlx1PQ1DqvA%2B%2FqNSJWJhFa73mamw%3D%3D"))
-        urlComponent.queryItems?.append(URLQueryItem(name: "numOfRows", value: "1"))
+        urlComponent.queryItems?.append(URLQueryItem(name: "numOfRows", value: "10"))
         urlComponent.queryItems?.append(URLQueryItem(name: "MobileApp", value: "AppTest"))
         urlComponent.queryItems?.append(URLQueryItem(name: "MobileOS", value: "ETC"))
         urlComponent.queryItems?.append(URLQueryItem(name: "arrange", value: "A"))
