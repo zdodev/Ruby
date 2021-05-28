@@ -3,6 +3,7 @@ import UIKit
 final class TourInformationViewController: UIViewController {
     @IBOutlet weak var tourListTableView: UITableView!
     private let tourAPIService = TourAPIService(sessionManager: URLSession.shared)
+    private let tourImageService = TourImageService(sessionManager: URLSession.shared)
     private var tourViewModels = [TourViewModel]()
     private var isPaging = false
     private var pageNumber = 0
@@ -71,8 +72,9 @@ final class TourInformationViewController: UIViewController {
     private func makeTourViewModel(_ tourInformation: TourInformation) -> [TourViewModel] {
         tourInformation.response.body.items.item.map { item in
             TourViewModel(title: item.title,
-                          address: item.baseAddress + (item.detailAddress ?? "") ,
-                          inquiringNumber: item.inquiringNumber)
+                          address: item.baseAddress + (item.detailAddress ?? ""),
+                          inquiringNumber: item.inquiringNumber,
+                          imageURL: item.imageURLAddress ?? "")
         }
     }
     
@@ -80,7 +82,8 @@ final class TourInformationViewController: UIViewController {
         TourViewModel(title: tourInformationSingleItem.response.body.items.item.title,
                       address: tourInformationSingleItem.response.body.items.item.baseAddress +
                         (tourInformationSingleItem.response.body.items.item.detailAddress ?? ""),
-                      inquiringNumber: tourInformationSingleItem.response.body.items.item.inquiringNumber)
+                      inquiringNumber: tourInformationSingleItem.response.body.items.item.inquiringNumber,
+                      imageURL: tourInformationSingleItem.response.body.items.item.imageURLAddress ?? "")
     }
 }
 
@@ -94,6 +97,14 @@ extension TourInformationViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.configureCell(tourViewModels[indexPath.row])
+        tourImageService.search(url: tourViewModels[indexPath.row].imageURL) { result in
+            switch result {
+            case .success(let data):
+                cell.configureCellImage(data: data)
+            case .failure(let error):
+                print(error)
+            }
+        }
         cell.configureCellImage(data: Data())
         return cell
     }
@@ -109,15 +120,13 @@ extension TourInformationViewController: UITableViewDelegate {
             if isPaging == false && hasNextPage() {
                 nextPaging()
             }
-        }
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !hasNextPage() {
-            let alert = UIAlertController(title: "마지막 페이지입니다.", message: nil, preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "확인", style: .default)
-            alert.addAction(alertAction)
-            present(alert, animated: true)
+            
+            if !hasNextPage() {
+                let alert = UIAlertController(title: "마지막 페이지입니다.", message: nil, preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "확인", style: .default)
+                alert.addAction(alertAction)
+                present(alert, animated: true)
+            }
         }
     }
     
