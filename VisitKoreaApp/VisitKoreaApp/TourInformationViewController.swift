@@ -94,6 +94,7 @@ extension TourInformationViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.configureCell(tourViewModels[indexPath.row])
+        cell.configureCellImage(data: Data())
         return cell
     }
 }
