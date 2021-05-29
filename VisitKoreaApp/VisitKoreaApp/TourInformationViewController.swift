@@ -3,7 +3,6 @@ import UIKit
 final class TourInformationViewController: UIViewController {
     @IBOutlet weak var tourListTableView: UITableView!
     private let tourAPIService = TourAPIService(sessionManager: URLSession.shared)
-    private let tourImageService = TourImageService(sessionManager: URLSession.shared)
     private let imageCache = ImageCache()
     private var tourViewModels = [TourViewModel]()
     private var isPaging = false
@@ -59,7 +58,8 @@ final class TourInformationViewController: UIViewController {
     private func nextPaging() {
         pageNumber += 1
         isPaging = true
-        if remainPage == 1 {
+        let hasOneRaminePage = remainPage == 1
+        if hasOneRaminePage {
             queryTourInformationSingleItem(pageNumber, type: TourInformationSingleItem.self)
         } else {
             queryTourInformation(pageNumber, type: TourInformation.self)
