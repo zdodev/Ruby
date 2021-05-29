@@ -11,8 +11,8 @@ final class TourInformationViewController: UIViewController {
     private var totalPage = 0
     private var remainPage = 2
     
-    private func queryTourInformation(_ page: Int) {
-        tourAPIService.search(pageNumber: page) { [weak self] result in
+    private func queryTourInformation<T: Decodable>(_ page: Int, type: T.Type) {
+        tourAPIService.search(pageNumber: page, type: TourInformation.self) { [weak self] result in
             switch result {
             case .success(let tourInformation):
                 let totalPage = tourInformation.response.body.totalCount
@@ -33,8 +33,8 @@ final class TourInformationViewController: UIViewController {
         }
     }
     
-    private func queryTourInformationSingleItem(_ page: Int) {
-        tourAPIService.searchSingleItem(pageNumber: page) { [weak self] result in
+    private func queryTourInformationSingleItem<T: Decodable>(_ page: Int, type: T.Type) {
+        tourAPIService.search(pageNumber: page, type: TourInformationSingleItem.self) { [weak self] result in
             switch result {
             case .success(let tourInformationSingleItem):
                 let totalPage = tourInformationSingleItem.response.body.totalCount
@@ -60,9 +60,9 @@ final class TourInformationViewController: UIViewController {
         pageNumber += 1
         isPaging = true
         if remainPage == 1 {
-            queryTourInformationSingleItem(pageNumber)
+            queryTourInformationSingleItem(pageNumber, type: TourInformationSingleItem.self)
         } else {
-            queryTourInformation(pageNumber)
+            queryTourInformation(pageNumber, type: TourInformation.self)
         }
     }
     
