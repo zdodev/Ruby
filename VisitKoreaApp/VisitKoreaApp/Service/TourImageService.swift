@@ -7,7 +7,7 @@ struct TourImageService {
         self.sessionManager = sessionManager
     }
     
-    func search(url: String, completionHandler: @escaping (Result<Data, NetworkError>) -> Void) {
+    func downloadImage(url: String, completionHandler: @escaping (Result<Data, NetworkError>) -> Void) {
         guard let imageURL = URL(string: url) else {
             return
         }
