@@ -8,11 +8,11 @@ struct TourImageService {
     }
     
     func search(url: String, completionHandler: @escaping (Result<Data, NetworkError>) -> Void) {
-        guard let imageUrl = URL(string: url) else {
+        guard let imageURL = URL(string: url) else {
             return
         }
         
-        sessionManager.dataTask(with: imageUrl) { data, response, error in
+        sessionManager.dataTask(with: imageURL) { data, response, error in
             if error != nil {
                 completionHandler(.failure(.networkError))
                 return
