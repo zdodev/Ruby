@@ -13,10 +13,8 @@ final class TourTableViewCell: UITableViewCell {
     }
     
     func configureCellImage(data: Data) {
-        if let imageView = UIImage(data: data) {
-            DispatchQueue.main.async {
-                self.mainImage.image = imageView
-            }
+        DispatchQueue.main.async {
+            self.mainImage.image = UIImage(data: data)
         }
     }
     
@@ -25,6 +23,8 @@ final class TourTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
+        
         mainImage.image = nil
         titleLabel.text = nil
         addressLabel.text = nil
