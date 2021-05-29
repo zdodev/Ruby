@@ -103,25 +103,28 @@ extension TourInformationViewController: UITableViewDataSource {
 
 extension TourInformationViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
+        let scrollViewOffsetY = scrollView.contentOffset.y
+        let scrollViewtHeight = scrollView.contentSize.height
         let height = scrollView.frame.height
+        let contentHeightGreaterThanScrollSize = scrollViewOffsetY > (scrollViewtHeight - height)
         
-        if offsetY > (contentHeight - height) {
-            if isPaging == false && hasNextPage() {
+        if contentHeightGreaterThanScrollSize {
+            let hasNextPage = remainPage > 0
+            
+            if isPaging == false && hasNextPage {
                 nextPaging()
             }
             
-            if !hasNextPage() {
-                let alert = UIAlertController(title: "마지막 페이지입니다.", message: nil, preferredStyle: .alert)
-                let alertAction = UIAlertAction(title: "확인", style: .default)
-                alert.addAction(alertAction)
-                present(alert, animated: true)
+            if !hasNextPage {
+                alertLastPage()
             }
         }
     }
     
-    private func hasNextPage() -> Bool {
-        remainPage > 0
+    private func alertLastPage() {
+        let alert = UIAlertController(title: "마지막 페이지입니다.", message: nil, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "확인", style: .default)
+        alert.addAction(alertAction)
+        present(alert, animated: true)
     }
 }
