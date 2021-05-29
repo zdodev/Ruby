@@ -4,15 +4,12 @@ final class TourInformationViewController: UIViewController {
     @IBOutlet weak var tourListTableView: UITableView!
     private let tourAPIService = TourAPIService(sessionManager: URLSession.shared)
     private let tourImageService = TourImageService(sessionManager: URLSession.shared)
+    private let imageCache = ImageCache()
     private var tourViewModels = [TourViewModel]()
     private var isPaging = false
     private var pageNumber = 0
     private var totalPage = 0
     private var remainPage = 2
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     private func queryTourInformation(_ page: Int) {
         tourAPIService.search(pageNumber: page) { [weak self] result in
@@ -97,15 +94,9 @@ extension TourInformationViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.configureCell(tourViewModels[indexPath.row])
-        tourImageService.search(url: tourViewModels[indexPath.row].imageURL) { result in
-            switch result {
-            case .success(let data):
-                cell.configureCellImage(data: data)
-            case .failure(let error):
-                print(error)
-            }
-        }
-        cell.configureCellImage(data: Data())
+        cell.setDefaultImage()
+        imageCache.fetchImage(urlString: tourViewModels[indexPath.row].imageURL, cell: cell)
+        
         return cell
     }
 }
