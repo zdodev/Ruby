@@ -17,9 +17,11 @@ final class TourTableViewCell: UITableViewCell {
             DispatchQueue.main.async {
                 self.mainImage.image = imageView
             }
-        } else {
-            mainImage.image = UIImage(systemName: "photo")
         }
+    }
+    
+    func setDefaultImage() {
+        mainImage.image = UIImage(systemName: "photo")
     }
     
     override func prepareForReuse() {
