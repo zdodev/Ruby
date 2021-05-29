@@ -93,7 +93,7 @@ extension TourInformationViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TourTableViewCell", for: indexPath) as? TourTableViewCell else {
             return UITableViewCell()
         }
-        cell.configureCell(tourViewModels[indexPath.row])
+        cell.configureCellLabel(tourViewModels[indexPath.row])
         cell.setDefaultImage()
         imageCache.fetchImage(urlString: tourViewModels[indexPath.row].imageURLString, cell: cell)
         
