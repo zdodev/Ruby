@@ -71,7 +71,7 @@ final class TourInformationViewController: UIViewController {
             TourViewModel(title: item.title,
                           address: item.baseAddress + (item.detailAddress ?? ""),
                           inquiringNumber: item.inquiringNumber,
-                          imageURL: item.imageURLAddress ?? "")
+                          imageURLString: item.imageURLAddress ?? "")
         }
     }
     
@@ -80,7 +80,7 @@ final class TourInformationViewController: UIViewController {
                       address: tourInformationSingleItem.response.body.items.item.baseAddress +
                         (tourInformationSingleItem.response.body.items.item.detailAddress ?? ""),
                       inquiringNumber: tourInformationSingleItem.response.body.items.item.inquiringNumber,
-                      imageURL: tourInformationSingleItem.response.body.items.item.imageURLAddress ?? "")
+                      imageURLString: tourInformationSingleItem.response.body.items.item.imageURLAddress ?? "")
     }
 }
 
@@ -95,7 +95,7 @@ extension TourInformationViewController: UITableViewDataSource {
         }
         cell.configureCell(tourViewModels[indexPath.row])
         cell.setDefaultImage()
-        imageCache.fetchImage(urlString: tourViewModels[indexPath.row].imageURL, cell: cell)
+        imageCache.fetchImage(urlString: tourViewModels[indexPath.row].imageURLString, cell: cell)
         
         return cell
     }

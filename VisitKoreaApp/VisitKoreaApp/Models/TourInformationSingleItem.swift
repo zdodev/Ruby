@@ -2,13 +2,7 @@ struct TourInformationSingleItem: Decodable {
     let response: Response
     
     struct Response: Decodable {
-        let header: Header
         let body: Body
-
-        struct Header: Decodable {
-            let resultCode: String
-            let resultMsg: String
-        }
         
         struct Body: Decodable {
             let items: Items
