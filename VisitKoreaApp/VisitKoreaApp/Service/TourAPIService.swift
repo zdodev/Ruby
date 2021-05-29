@@ -13,7 +13,7 @@ struct TourAPIService {
         self.sessionManager = sessionManager
     }
     
-    func search(pageNumber: Int, completionHandler: @escaping (Result<TourInformation, NetworkError>) -> Void) {
+    func search<T: Decodable>(pageNumber: Int, type: T.Type, completionHandler: @escaping (Result<T, NetworkError>) -> Void) {
         guard let url = makeURL(pageNumber) else {
             return
         }
@@ -30,33 +30,7 @@ struct TourAPIService {
             }
             
             let jsonAnalyzer = JSONAnalyzer()
-            guard let decodedData = jsonAnalyzer.decodeJSON(TourInformation.self, data: receivedData) else {
-                completionHandler(.failure(.decodeError))
-                return
-            }
-
-            completionHandler(.success(decodedData))
-        }.resume()
-    }
-    
-    func searchSingleItem(pageNumber: Int, completionHandler: @escaping (Result<TourInformationSingleItem, NetworkError>) -> Void) {
-        guard let url = makeURL(pageNumber) else {
-            return
-        }
-
-        sessionManager.dataTask(with: url) { data, response, error in
-            if error != nil {
-                completionHandler(.failure(.networkError))
-                return
-            }
-
-            guard let receivedData = data else {
-                completionHandler(.failure(.dataReceiveError))
-                return
-            }
-
-            let jsonAnalyzer = JSONAnalyzer()
-            guard let decodedData = jsonAnalyzer.decodeJSON(TourInformationSingleItem.self, data: receivedData) else {
+            guard let decodedData = jsonAnalyzer.decodeJSON(type.self, data: receivedData) else {
                 completionHandler(.failure(.decodeError))
                 return
             }
