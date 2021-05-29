@@ -7,12 +7,8 @@ struct TourImageService {
         self.sessionManager = sessionManager
     }
     
-    func downloadImage(url: String, completionHandler: @escaping (Result<Data, NetworkError>) -> Void) {
-        guard let imageURL = URL(string: url) else {
-            return
-        }
-        
-        sessionManager.dataTask(with: imageURL) { data, response, error in
+    func downloadImage(url: URL, completionHandler: @escaping (Result<Data, NetworkError>) -> Void) {
+        sessionManager.dataTask(with: url) { data, response, error in
             if error != nil {
                 completionHandler(.failure(.networkError))
                 return
