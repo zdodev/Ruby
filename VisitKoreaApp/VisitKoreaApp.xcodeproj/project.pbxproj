@@ -24,6 +24,7 @@
 		410B6C3A265FE7E4009E6A17 /* TourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C39265FE7E4009E6A17 /* TourViewModel.swift */; };
 		414737332660A65A007DD04D /* TourInformationSingleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414737322660A65A007DD04D /* TourInformationSingleItem.swift */; };
 		414737352660CF28007DD04D /* TourImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414737342660CF28007DD04D /* TourImageService.swift */; };
+		41D8AEA22661F07A000D5CA2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8AEA12661F07A000D5CA2 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		410B6C39265FE7E4009E6A17 /* TourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourViewModel.swift; sourceTree = "<group>"; };
 		414737322660A65A007DD04D /* TourInformationSingleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInformationSingleItem.swift; sourceTree = "<group>"; };
 		414737342660CF28007DD04D /* TourImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourImageService.swift; sourceTree = "<group>"; };
+		41D8AEA12661F07A000D5CA2 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				410B6C28265F7787009E6A17 /* TourAPIService.swift */,
 				414737342660CF28007DD04D /* TourImageService.swift */,
 				410B6C2F265FCB3C009E6A17 /* SessionManagerProtocol.swift */,
+				41D8AEA12661F07A000D5CA2 /* ImageCache.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				410B6BF0265F5B77009E6A17 /* AppDelegate.swift in Sources */,
 				410B6C2C265F86DA009E6A17 /* JSONAnalyzer.swift in Sources */,
 				410B6C29265F7787009E6A17 /* TourAPIService.swift in Sources */,
+				41D8AEA22661F07A000D5CA2 /* ImageCache.swift in Sources */,
 				410B6BF2265F5B77009E6A17 /* SceneDelegate.swift in Sources */,
 				414737332660A65A007DD04D /* TourInformationSingleItem.swift in Sources */,
 				414737352660CF28007DD04D /* TourImageService.swift in Sources */,
