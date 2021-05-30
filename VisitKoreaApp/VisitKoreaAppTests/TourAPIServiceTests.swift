@@ -3,7 +3,8 @@ import XCTest
 
 class TourAPIServiceTests: XCTestCase {
     func test_관광API_요청_시_데이터_응답_성공() {
-        let sut = TourAPIService(sessionManager: TourAPISessionManagerStub())
+        let tourAPISessionManagerStub = TourAPISessionManagerStub()
+        let sut = TourAPIService(sessionManager: tourAPISessionManagerStub)
         
         sut.search(pageNumber: 1, type: TourInformation.self) { result in
             switch result {
@@ -15,5 +16,15 @@ class TourAPIServiceTests: XCTestCase {
                 XCTFail("관광API 요청에 실패하였습니다.")
             }
         }
+        
+        guard let host = tourAPISessionManagerStub.url?.host else {
+            return
+        }
+        guard let path = tourAPISessionManagerStub.url?.path else {
+            return
+        }
+        let url = host + path
+        let expectedValue = "api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList"
+        XCTAssertEqual(url, expectedValue, "요청한 URL이 예상한 URL이 아닙니다.")
     }
 }
