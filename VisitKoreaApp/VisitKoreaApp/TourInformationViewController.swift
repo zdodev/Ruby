@@ -121,6 +121,10 @@ extension TourInformationViewController: UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     private func alertLastPage() {
         let alert = UIAlertController(title: "마지막 페이지입니다.", message: nil, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "확인", style: .default)
