@@ -24,6 +24,8 @@
 		410B6C3A265FE7E4009E6A17 /* TourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B6C39265FE7E4009E6A17 /* TourViewModel.swift */; };
 		412A3CE426633ED30082C486 /* TourInformationSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 412A3CE326633ED30082C486 /* TourInformationSample.json */; };
 		412A3CE7266345740082C486 /* TourAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A3CE6266345740082C486 /* TourAPIServiceTests.swift */; };
+		412A3CEB26634E890082C486 /* TourImageServiceSessionManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A3CEA26634E890082C486 /* TourImageServiceSessionManagerStub.swift */; };
+		412A3CEE26634F6A0082C486 /* TourImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A3CED26634F6A0082C486 /* TourImageServiceTests.swift */; };
 		414737332660A65A007DD04D /* TourInformationSingleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414737322660A65A007DD04D /* TourInformationSingleItem.swift */; };
 		414737352660CF28007DD04D /* TourImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414737342660CF28007DD04D /* TourImageService.swift */; };
 		41D8AEA22661F07A000D5CA2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8AEA12661F07A000D5CA2 /* ImageCache.swift */; };
@@ -61,6 +63,8 @@
 		410B6C39265FE7E4009E6A17 /* TourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourViewModel.swift; sourceTree = "<group>"; };
 		412A3CE326633ED30082C486 /* TourInformationSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TourInformationSample.json; sourceTree = "<group>"; };
 		412A3CE6266345740082C486 /* TourAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourAPIServiceTests.swift; sourceTree = "<group>"; };
+		412A3CEA26634E890082C486 /* TourImageServiceSessionManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourImageServiceSessionManagerStub.swift; sourceTree = "<group>"; };
+		412A3CED26634F6A0082C486 /* TourImageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourImageServiceTests.swift; sourceTree = "<group>"; };
 		414737322660A65A007DD04D /* TourInformationSingleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInformationSingleItem.swift; sourceTree = "<group>"; };
 		414737342660CF28007DD04D /* TourImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourImageService.swift; sourceTree = "<group>"; };
 		41D8AEA12661F07A000D5CA2 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -119,9 +123,10 @@
 		410B6C05265F5B79009E6A17 /* VisitKoreaAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				410B6C31265FCCE3009E6A17 /* TourAPISessionManagerStub.swift */,
 				410B6C06265F5B79009E6A17 /* JSONAnalyzerTests.swift */,
 				412A3CE6266345740082C486 /* TourAPIServiceTests.swift */,
+				412A3CED26634F6A0082C486 /* TourImageServiceTests.swift */,
+				412A3CEC26634F4F0082C486 /* Stubs */,
 				412A3CE526633ED50082C486 /* Sample */,
 				410B6C08265F5B79009E6A17 /* Info.plist */,
 			);
@@ -192,6 +197,15 @@
 				410B6C2D265FAA5D009E6A17 /* TourInformationSingleItemSample.json */,
 			);
 			path = Sample;
+			sourceTree = "<group>";
+		};
+		412A3CEC26634F4F0082C486 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				410B6C31265FCCE3009E6A17 /* TourAPISessionManagerStub.swift */,
+				412A3CEA26634E890082C486 /* TourImageServiceSessionManagerStub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,8 +329,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412A3CEE26634F6A0082C486 /* TourImageServiceTests.swift in Sources */,
 				410B6C32265FCCE3009E6A17 /* TourAPISessionManagerStub.swift in Sources */,
 				410B6C07265F5B79009E6A17 /* JSONAnalyzerTests.swift in Sources */,
+				412A3CEB26634E890082C486 /* TourImageServiceSessionManagerStub.swift in Sources */,
 				412A3CE7266345740082C486 /* TourAPIServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
