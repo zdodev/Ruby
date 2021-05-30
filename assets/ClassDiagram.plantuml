@@ -1,0 +1,120 @@
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+
+package Model {
+  class "TourInformation" as TourInformation << (S, SkyBlue) struct >> { 
+    ~response : Response 
+  }
+
+  class "TourInformationSingleItem" as TourInformationSingleItem << (S, SkyBlue) struct >> { 
+    ~response : Response 
+  }
+
+  class "TourViewModel" as TourViewModel << (S, SkyBlue) struct >> { 
+    ~title : String
+    ~address : String
+    ~inquiringNumber : String
+    ~imageURLString : String 
+  }
+}
+
+package Services {
+  class "ImageCache" as ImageCache << (S, SkyBlue) struct >> { 
+    -fileManager
+    -memoryCache
+    -tourImageService
+    -path : URL
+    ~init()
+    ~fetchImage(urlString:cell:)
+    -createMemoryCache(_:_:)
+    -createDiskCache(_:_:)
+    -fetchDiskCache(_:)
+    -downloadImage(_:_:)
+    -isMemoryCached(_:)
+    -isDiskCached(_:) 
+  }
+
+  class "NetworkError" as NetworkError << (E, LightSteelBlue) enum >> { 
+    ~networkError
+    ~dataReceiveError
+    ~decodeError 
+  }
+
+  class "TourAPIService" as TourAPIService << (S, SkyBlue) struct >> { 
+    -sessionManager : SessionManagerProtocol
+    ~init(sessionManager:)
+    ~search(pageNumber:type:completionHandler:)
+    -makeURL(_:) 
+  }
+
+  class "SessionManagerProtocol" as SessionManagerProtocol << (P, GoldenRod) protocol >> { 
+    ~dataTask(with:completionHandler:) 
+  }
+
+  class "TourImageService" as TourImageService << (S, SkyBlue) struct >> { 
+    -sessionManager : SessionManagerProtocol
+    ~init(sessionManager:)
+    ~downloadImage(url:completionHandler:) 
+  }
+}
+
+package Utility {
+  class "JSONAnalyzer" as JSONAnalyzer << (S, SkyBlue) struct >> { 
+   ~decodeJSON(_:data:) 
+  }
+}
+
+package ViewController {
+  class "TourInformationViewController" as TourInformationViewController << (C, DarkSeaGreen) >> { 
+    ~tourListTableView : UITableView!
+    -tourAPIService
+    -imageCache
+    -tourViewModels
+    -isPaging
+    -pageNumber
+    -totalPage
+    -remainPage
+    -fetchTourInformation(_:type:)
+    -fetchTourInformationSingleItem(_:type:)
+    -nextPaging()
+    -makeTourViewModel(_:)
+    -makeTourSingleViewModel(_:) 
+  }
+
+  package View {
+    class "TourTableViewCell" as TourTableViewCell << (C, DarkSeaGreen) >> { 
+      ~mainImageView : UIImageView!
+      ~titleLabel : UILabel!
+      ~addressLabel : UILabel!
+      ~inquiringLabel : UILabel!
+      ~configureCellLabel(_:)
+      ~configureCellImage(data:)
+      ~setDefaultImage()
+      ~prepareForReuse() 
+    }
+  }
+}
+
+TourImageService <-- ImageCache
+TourTableViewCell <-- ImageCache
+
+SessionManagerProtocol <-- TourImageService
+NetworkError <.. TourImageService
+
+SessionManagerProtocol <-- TourAPIService
+NetworkError <.. TourAPIService
+JSONAnalyzer <.. TourAPIService
+
+TourViewModel <.. TourTableViewCell
+
+TourAPIService <-- TourInformationViewController
+ImageCache <-- TourInformationViewController
+TourViewModel <-- TourInformationViewController
+TourInformation <.. TourInformationViewController
+TourInformationSingleItem <.. TourInformationViewController
+TourTableViewCell <.. TourInformationViewController
+
+@enduml
