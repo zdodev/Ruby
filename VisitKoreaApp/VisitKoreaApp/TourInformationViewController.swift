@@ -10,7 +10,7 @@ final class TourInformationViewController: UIViewController {
     private var totalPage = 0
     private var remainPage = 2
     
-    private func queryTourInformation<T: Decodable>(_ page: Int, type: T.Type) {
+    private func fetchTourInformation<T: Decodable>(_ page: Int, type: T.Type) {
         tourAPIService.search(pageNumber: page, type: TourInformation.self) { [weak self] result in
             switch result {
             case .success(let tourInformation):
@@ -32,7 +32,7 @@ final class TourInformationViewController: UIViewController {
         }
     }
     
-    private func queryTourInformationSingleItem<T: Decodable>(_ page: Int, type: T.Type) {
+    private func fetchTourInformationSingleItem<T: Decodable>(_ page: Int, type: T.Type) {
         tourAPIService.search(pageNumber: page, type: TourInformationSingleItem.self) { [weak self] result in
             switch result {
             case .success(let tourInformationSingleItem):
@@ -60,9 +60,9 @@ final class TourInformationViewController: UIViewController {
         isPaging = true
         let hasOneRaminePage = remainPage == 1
         if hasOneRaminePage {
-            queryTourInformationSingleItem(pageNumber, type: TourInformationSingleItem.self)
+            fetchTourInformationSingleItem(pageNumber, type: TourInformationSingleItem.self)
         } else {
-            queryTourInformation(pageNumber, type: TourInformation.self)
+            fetchTourInformation(pageNumber, type: TourInformation.self)
         }
     }
     
