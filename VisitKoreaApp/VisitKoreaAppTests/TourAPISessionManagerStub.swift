@@ -1,7 +1,7 @@
 import Foundation
 @testable import VisitKoreaApp
 
-final class SessionManagerStub: SessionManagerProtocol {
+final class TourAPISessionManagerStub: SessionManagerProtocol {
     var url: URL?
     
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
@@ -16,7 +16,7 @@ final class SessionManagerStub: SessionManagerProtocol {
     
     private func makeStubData() -> Data? {
         let bundle = Bundle(for: type(of: self))
-        guard let url = bundle.url(forResource: "TourInformationListSample", withExtension: "json") else {
+        guard let url = bundle.url(forResource: "TourInformationSample", withExtension: "json") else {
             return nil
         }
         
