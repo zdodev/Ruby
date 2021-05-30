@@ -1,7 +1,7 @@
 import XCTest
 @testable import VisitKoreaApp
 
-class VisitKoreaAppTests: XCTestCase {
+class JSONAnalyzerTests: XCTestCase {
     func test_관광API_TourInformationJSON_디코딩을_성공() {
         let sut = JSONAnalyzer()
         let bundle = Bundle(for: type(of: self))
