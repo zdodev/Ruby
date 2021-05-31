@@ -46,7 +46,7 @@ struct TourAPIService {
         }
         urlComponent.queryItems = [URLQueryItem]()
         
-        urlComponent.queryItems?.append(URLQueryItem(name: "serviceKey", value: "hm3Ng%2Bp0hajUH1lyqqB1JTmURPuIidiOj%2BoR1I49TQDEJPB9eY9CrArmUXrlx1PQ1DqvA%2B%2FqNSJWJhFa73mamw%3D%3D"))
+        urlComponent.queryItems?.append(URLQueryItem(name: "serviceKey", value: ))
         urlComponent.queryItems?.append(URLQueryItem(name: "numOfRows", value: "10"))
         urlComponent.queryItems?.append(URLQueryItem(name: "MobileApp", value: "AppTest"))
         urlComponent.queryItems?.append(URLQueryItem(name: "MobileOS", value: "ETC"))
